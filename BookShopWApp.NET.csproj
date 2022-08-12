@@ -1,0 +1,110 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{091D69A6-913A-4F6D-AC1C-4D34D0300CAD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>BookShopWApp.NET</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Legacy.NET\.idea\misc.xml" />
+    <Content Include="Legacy.NET\.idea\modules.xml" />
+    <Content Include="Legacy.NET\.idea\workspace.xml" />
+    <Content Include="Legacy.NET\AdminBooks.aspx" />
+    <Content Include="Legacy.NET\AdminMenu.aspx" />
+    <Content Include="Legacy.NET\AdvSearch.aspx" />
+    <Content Include="Legacy.NET\BookDetail.aspx" />
+    <Content Include="Legacy.NET\BookMaint.aspx" />
+    <Content Include="Legacy.NET\Books.aspx" />
+    <Content Include="Legacy.NET\Default.aspx" />
+    <Content Include="Legacy.NET\EditorialCatGrid.aspx" />
+    <Content Include="Legacy.NET\EditorialCatRecord.aspx" />
+    <Content Include="Legacy.NET\EditorialsGrid.aspx" />
+    <Content Include="Legacy.NET\EditorialsRecord.aspx" />
+    <Content Include="Legacy.NET\Legacy.NET.csproj" />
+    <Content Include="Legacy.NET\Legacy.NET.csproj.user" />
+    <Content Include="Legacy.NET\Legacy.NET.sln" />
+    <Content Include="Legacy.NET\Login.aspx" />
+    <Content Include="Legacy.NET\MembersGrid.aspx" />
+    <Content Include="Legacy.NET\MembersInfo.aspx" />
+    <Content Include="Legacy.NET\MembersRecord.aspx" />
+    <Content Include="Legacy.NET\MyInfo.aspx" />
+    <Content Include="Legacy.NET\OrdersGrid.aspx" />
+    <Content Include="Legacy.NET\OrdersRecord.aspx" />
+    <Content Include="Legacy.NET\Registration.aspx" />
+    <Content Include="Legacy.NET\ShoppingCart.aspx" />
+    <Content Include="Legacy.NET\ShoppingCartRecord.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Legacy.NET\App_Code.1\AssemblyInfo.cs" />
+    <Compile Include="Legacy.NET\App_Code.1\CCUtility.cs" />
+    <Compile Include="Legacy.NET\App_Code.1\Global.asax.cs" />
+    <Compile Include="Legacy.NET\App_Code.1\Migrated\CCPager_cs_PagingData.cs" />
+    <Compile Include="Legacy.NET\BookDetail.cs" />
+    <Compile Include="Legacy.NET\CardTypesGrid.cs" />
+    <Compile Include="Legacy.NET\CategoriesGrid.cs" />
+    <Compile Include="Legacy.NET\Default.cs" />
+    <Compile Include="Legacy.NET\EditorialCatGrid.cs" />
+    <Compile Include="Legacy.NET\EditorialsGrid.cs" />
+    <Compile Include="Legacy.NET\Login.cs" />
+    <Compile Include="Legacy.NET\MembersGrid.cs" />
+    <Compile Include="Legacy.NET\OrdersGrid.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Legacy.NET\Legacy.NET.iml" />
+    <None Include="Legacy.NET\obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Legacy.NET\obj\x86\Debug\Legacy.NET.csproj.CoreCompileInputs.cache" />
+    <None Include="Legacy.NET\obj\x86\Debug\Legacy.NET.csprojAssemblyReference.cache" />
+    <None Include="Legacy.NET\obj\x86\Release\Legacy.NET.csproj.CoreCompileInputs.cache" />
+    <None Include="Legacy.NET\obj\x86\Release\Legacy.NET.csprojAssemblyReference.cache" />
+    <None Include="Legacy.NET\sonar-project.properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Legacy.NET\bin\Debug\" />
+    <Folder Include="Legacy.NET\bin\Release\" />
+    <Folder Include="Legacy.NET\obj\x86\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
