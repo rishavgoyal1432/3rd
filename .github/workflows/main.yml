@@ -1,10 +1,23 @@
- # Steps represent a sequence of tasks that will be executed as part of the job
+name: DAST Scan
+
+# This workflow will run when a push or pull request is made to the repository
+on:
+  push:
+  pull_request:
+
+jobs:
+  dast_scan:
+    name: Run DAST Scan
+    runs-on: ubuntu-latest
+
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-    # Scan with DAST
-    - name: run dast web
-      uses: checkmarx/dast-action@latest
-      with:
-        config: 'zapconfig.yaml'
-        verbose: true
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Run DAST with Checkmarx action
+      - name: Run DAST Web Scan
+        uses: checkmarx/dast-action@v2
+        with:
+          config: 'zapconfig.yaml'
+          verbose: true
