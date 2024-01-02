@@ -36,48 +36,16 @@ env:
     failOnError: true
     failOnWarning: false
     progressToStdout: true
-  vars: {}
-jobs:
-  - parameters:
-      maxAlertsPerRule: 0
-      scanOnlyInScope: true
-      maxBodySizeInBytesToScan: 0
-      enableTags: false
-    rules: []
-    name: "passiveScan-config"
-    type: "passiveScan-config"
-  - parameters:
-      apiFile: "C:\\Users\\joaor\\OneDrive - Checkmarx\\Desktop\\dast - testfire\\openapi.json"
-      apiUrl: ""
-      targetUrl: "http://testfire.net/"
-      context: "Default Context"
-    name: "openapi"
-    type: "openapi"
-  - parameters: {}
-    name: "passiveScan-wait"
-    type: "passiveScan-wait"
-  - parameters:
-      context: "Default Context"
-      user: "test_user"
-      policy: ""
-      maxRuleDurationInMins: 0
-      maxScanDurationInMins: 0
-      addQueryParam: false
-      delayInMs: 0
-      handleAntiCSRFTokens: false
-      injectPluginIdInHeader: false
-      scanHeadersAllRequests: false
-      threadPerHost: 10
-    policyDefinition:
-      defaultStrength: "medium"
-      defaultThreshold: "medium"
+    vars:
+      EnvironmentID: "y9jeiidiodsu"
+      AstAPIKey: "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5Y2Y1YmI0NC1iMTNlLTQzYWQtOWQyYy1lYjk2NTlkN2EzZTIifQ.eyJpYXQiOjE3MDQxNzUyNjAsImp0aSI6IjE5NzFhNGE1LTI0ODYtNGU1Yy04OWMzLTNiNGQ4ZTNkNjMwNyIsImlzcyI6Imh0dHBzOi8vZXUuaWFtLmNoZWNrbWFyeC5uZXQvYXV0aC9yZWFsbXMvZHBfd3BfYWNjb3VudCIsImF1ZCI6Imh0dHBzOi8vZXUuaWFtLmNoZWNrbWFyeC5uZXQvYXV0aC9yZWFsbXMvZHBfd3BfYWNjb3VudCIsInN1YiI6IjI0N2E1NTBhLWNmOTMtNGQzZC05YzdkLTA2NTMzZDBiMzNmOSIsInR5cCI6Ik9mZmxpbmUiLCJhenAiOiJhc3QtYXBwIiwic2Vzc2lvbl9zdGF0ZSI6IjQzMDU3ZjA1LTBlNzctNGZkNi1iZjM1LWI4OTJiOGY1NzJjZCIsInNjb3BlIjoiIG9mZmxpbmVfYWNjZXNzIiwic2lkIjoiNDMwNTdmMDUtMGU3Ny00ZmQ2LWJmMzUtYjg5MmI4ZjU3MmNkIn0.7oMXktcgl9f1EBR8fJkMHrN_3zzOHkbvGo1_saNZijc"
+  jobs:
+    - parameters:
+        maxAlertsPerRule: 0
+        scanOnlyInScope: true
+        maxBodySizeInBytesToScan: 0
+        enableTags: false
       rules: []
-    name: "activeScan"
-    type: "activeScan"
-  - parameters:
-      template: "risk-confidence-html"
-      reportDir: "C:\\Users\\joaor"
-      reportTitle: "ZAP Scanning Report"
-      reportDescription: ""
-    name: "report"
-    type: "report"
+      name: "passiveScan-config"
+      type: "passiveScan-config"
+    # ... (other job configurations)
