@@ -20,4 +20,7 @@ jobs:
         uses: checkmarx/dast-github-action@main
         with:
           config: 'zapconfig.yaml'
+          command: web
+          base_url: https://eu.ast.checkmarx.net
+          environment_id: y9jeiidiodsu
           verbose: true
