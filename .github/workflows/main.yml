@@ -17,7 +17,7 @@ jobs:
 
       # Run DAST with Checkmarx action
       - name: Run DAST Web Scan
-        uses: checkmarx/dast-github-action@v2
+        uses: checkmarx/dast-github-action@main
         with:
           config: 'zapconfig.yaml'
           verbose: true
