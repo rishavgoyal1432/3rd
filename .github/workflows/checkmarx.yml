@@ -1,21 +1,16 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-# This is a basic workflow to help you get started with Using Checkmarx CxFlow Action
 name: CxFlow
+
 on:
   push:
     branches: [ "main" ]
   pull_request:
-    # The branches below must be a subset of the branches above
     branches: [ "main" ]
   schedule:
     - cron: '18 4 * * 5'
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel - this job is specifically configured to use the Checkmarx CxFlow Action
+
 permissions:
   contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,19 +23,25 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-  - name: Checkmarx CxFlow Action
-    uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.9
-    with:
-      project: CxFlow Project
-      team: CxServer
-      checkmarx_url: ${{ secrets.CHECKMARX_URL }}
-      checkmarx_username: rishavgoyal1432
-      checkmarx_password: Rishav@2698
-      checkmarx_client_secret: 014DF517-39D1-4453-B7B3-9930C563627C
-      scanners: sast
-      params: --namespace=rishavgoyal1432 --repo-name=3rd --branch=main --cx-flow.filter-severity --cx-flow.filter-category --checkmarx.disable-clubbing=true --repo-url=https://github.com/rishavgoyal1432/3rd.git
+  Checkmarx_CxFlow_Action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkmarx CxFlow Action
+        uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.9
+        with:
+          project: CxFlow Project
+          team: CxServer
+          checkmarx_url: ${{ secrets.CHECKMARX_URL }}
+          checkmarx_username: rishavgoyal1432
+          checkmarx_password: Rishav@2698
+          checkmarx_client_secret: 014DF517-39D1-4453-B7B3-9930C563627C
+          scanners: sast
+          params: --namespace=rishavgoyal1432 --repo-name=3rd --branch=main --cx-flow.filter-severity --cx-flow.filter-category --checkmarx.disable-clubbing=true --repo-url=https://github.com/rishavgoyal1432/3rd.git
 
-  - name: Upload SARIF file
-    uses: github/codeql-action/upload-sarif@v2
-    with:
-      sarif_file: cx.sarif
+  Upload_SARIF_File:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: cx.sarif
